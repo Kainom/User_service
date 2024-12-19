@@ -7,7 +7,6 @@ target/
 *.properties
 Dockerfile
 docker-compose.yml
-
 ### STS ###
 .apt_generated
 .classpath
