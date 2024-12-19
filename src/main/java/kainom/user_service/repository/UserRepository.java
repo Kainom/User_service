@@ -11,6 +11,6 @@ import kainom.user_service.model.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByCpf(String cpf);
 
-    List<User> queryByNomeLike(String name);
+    List<User> queryByNomeLike(String nome);
 
 }

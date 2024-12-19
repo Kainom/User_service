@@ -1,7 +1,6 @@
-create schema if not exists users;
-
+create schema if not exists usuarios;
 create table
-    users.usuario (
+    usuarios.usuario (
         id bigserial primary key,
         nome varchar(100) not null,
         cpf varchar(100) not null,
