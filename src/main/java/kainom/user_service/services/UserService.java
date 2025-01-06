@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kainom.user_service.dto.UserDTO;
+import com.kainom.dtos.UserDTO;
+
 import kainom.user_service.model.User;
 import kainom.user_service.patterns.UserAdapter;
 import kainom.user_service.repository.UserRepository;

@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import kainom.user_service.dto.UserDTO;
+import com.kainom.dtos.UserDTO;
+
 import kainom.user_service.services.UserService;
 
 @RestController

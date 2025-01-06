@@ -1,6 +1,7 @@
 package kainom.user_service.patterns;
 
-import kainom.user_service.dto.UserDTO;
+import com.kainom.dtos.UserDTO;
+
 import kainom.user_service.model.User;
 
 public interface IUserAdapter {
