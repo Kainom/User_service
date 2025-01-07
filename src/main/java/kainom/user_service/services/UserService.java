@@ -69,9 +69,7 @@ public class UserService {
             return userAdapter.adaptToDto(user);
 
         }
-
-        return null;
-
+        throw new UserNotFoundException();
     }
 
     public List<UserDTO> queryByName(String name) {
