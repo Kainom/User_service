@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import com.kainom.dtos.ErrorDTO;
 import com.kainom.err.UserNotFoundException;
 
-@ControllerAdvice(basePackages = "kainom.user_service.controllers")
+@ControllerAdvice(basePackages = "kainom.user_service.controller")
 public class UserControllerAdvice {
     @ResponseBody
     @ResponseStatus(HttpStatus.NOT_FOUND)

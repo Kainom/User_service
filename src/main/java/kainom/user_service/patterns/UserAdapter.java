@@ -1,8 +1,12 @@
 package kainom.user_service.patterns;
 
-import com.kainom.dtos.UserDTO;
 
+
+
+import com.kainom.dtos.UserDTO;
 import kainom.user_service.model.User;
+
+
 
 public class UserAdapter implements IUserAdapter {
     private static UserAdapter userAdapter;
@@ -20,6 +24,8 @@ public class UserAdapter implements IUserAdapter {
         userDto.setEmail(user.getEmail());
         userDto.setTelefone(user.getTelefone());
         userDto.setDataCadastro(user.getDataCadastro());
+        userDto.setKey(user.getKey());
+
         return userDto;
     }
 
@@ -32,6 +38,7 @@ public class UserAdapter implements IUserAdapter {
         user.setEmail(userDto.getEmail());
         user.setTelefone(userDto.getTelefone());
         user.setDataCadastro(userDto.getDataCadastro());
+        user.setKey(userDto.getKey());
         return user;
     }
 

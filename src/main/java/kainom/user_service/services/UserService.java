@@ -2,12 +2,14 @@ package kainom.user_service.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kainom.dtos.UserDTO;
+import com.kainom.err.UserNotFoundException;
 
 import kainom.user_service.model.User;
 import kainom.user_service.patterns.UserAdapter;
@@ -18,7 +20,7 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-    
+
     private UserAdapter userAdapter = UserAdapter.getInstance();
 
     public List<UserDTO> getAll() {
@@ -42,6 +44,8 @@ public class UserService {
     }
 
     public UserDTO save(UserDTO userDTO) {
+        userDTO.setKey(UUID.randomUUID().toString());
+
         User user = userRepository.save(userAdapter.adaptToModel(userDTO));
         return userAdapter.adaptToDto(user);
 
@@ -60,9 +64,9 @@ public class UserService {
 
     }
 
-    public UserDTO findByCpf(String cpf) {
+    public UserDTO findByCpf(String cpf,String key) {
 
-        User user = userRepository.findByCpf(cpf);
+        User user = userRepository.findByCpfAndKey(cpf,key);
 
         if (user != null) {
 
